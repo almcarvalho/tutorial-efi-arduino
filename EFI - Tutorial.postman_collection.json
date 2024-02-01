@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "f715a095-a201-4de0-9f47-00c63d9a3196",
+		"name": "EFI - Tutorial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16429654"
+	},
+	"item": [
+		{
+			"name": "Consulta Maquina 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/consulta-Maquina01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"consulta-Maquina01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rota de Teste - Inclusão de valor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"valor\" : \"2.00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/rota-recebimento-teste",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"rota-recebimento-teste"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta remota",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://efi-pay-6e3d19c028a1.herokuapp.com/consulta-Maquina01",
+					"protocol": "https",
+					"host": [
+						"efi-pay-6e3d19c028a1",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"consulta-Maquina01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rota de Teste - Inclusão Remota",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"valor\" : \"5.00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://efi-pay-6e3d19c028a1.herokuapp.com/rota-recebimento-teste",
+					"protocol": "https",
+					"host": [
+						"efi-pay-6e3d19c028a1",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"rota-recebimento-teste"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gerar qrcode - copia e cola",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/brcode?nome=Lucas Carvalho&cidade=Aracaju&chave=b84ceb98-a8a9-49b6-8c49-0baf9d4ff7be&valor=2.00&txid=70a8cdcb59b54eac0002&mcc=7372&saida=br",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"brcode"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Lucas Carvalho"
+						},
+						{
+							"key": "cidade",
+							"value": "Aracaju"
+						},
+						{
+							"key": "chave",
+							"value": "b84ceb98-a8a9-49b6-8c49-0baf9d4ff7be"
+						},
+						{
+							"key": "valor",
+							"value": "2.00"
+						},
+						{
+							"key": "txid",
+							"value": "70a8cdcb59b54eac0002"
+						},
+						{
+							"key": "mcc",
+							"value": "7372"
+						},
+						{
+							"key": "saida",
+							"value": "br"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
